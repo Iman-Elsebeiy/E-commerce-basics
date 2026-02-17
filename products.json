@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "name": "Men Jacket",
+    "category": "men",
+    "description": "Classic winter jacket made from premium materials.",
+    "price": 80,
+    "oldPrice": false,
+    "discount": false,
+    "new": "NEW",
+    "rating": 4.5,
+    "reviews": 120,
+    "stock": 25,
+    "brand": "UrbanWear",
+    "colors": ["black", "navy", "brown"],
+    "sizes": ["S", "M", "L", "XL"],
+    "images": [
+      "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg",
+      "https://images.pexels.com/photos/1043473/pexels-photo-1043473.jpeg",
+      "https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg"
+    ],
+    "tags": ["jacket", "winter", "men"]
+  },
+
+  {
+    "id": 2,
+    "name": "Men T-Shirt",
+    "category": "men",
+    "description": "Soft cotton t-shirt suitable for everyday wear.",
+    "price": 25,
+    "oldPrice": 30,
+    "discount": 15,
+    "rating": 4.2,
+    "reviews": 85,
+    "stock": 60,
+    "brand": "BasicLine",
+    "colors": ["white", "black", "gray"],
+    "sizes": ["S", "M", "L", "XL"],
+    "images": [
+      "https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg",
+      "https://images.pexels.com/photos/769733/pexels-photo-769733.jpeg",
+      "https://images.pexels.com/photos/1002647/pexels-photo-1002647.jpeg"
+    ],
+    "tags": ["tshirt", "casual"]
+  },
+
+  {
+    "id": 3,
+    "name": "Women Dress",
+    "category": "women",
+    "description": "Elegant evening dress with modern cut.",
+    "price": 90,
+    "oldPrice": false,
+    "discount": false,
+    "rating": 4.8,
+    "reviews": 200,
+    "stock": 18,
+    "brand": "LunaStyle",
+    "colors": ["black", "red"],
+    "sizes": ["S", "M", "L"],
+    "images": [
+      "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg",
+      "https://images.pexels.com/photos/2983465/pexels-photo-2983465.jpeg",
+      "https://images.pexels.com/photos/6311394/pexels-photo-6311394.jpeg"
+    ],
+    "tags": ["dress", "evening"]
+  },
+
+  {
+    "id": 4,
+    "name": "Kids Hoodie",
+    "category": "kids",
+    "description": "Warm hoodie for kids made of soft cotton.",
+    "price": 35,
+    "oldPrice": false,
+    "discount": false,
+    "new": "NEW",
+    "rating": 4.6,
+    "reviews": 60,
+    "stock": 40,
+    "brand": "HappyKids",
+    "colors": ["blue", "yellow"],
+    "sizes": ["2Y", "4Y", "6Y"],
+    "images": [
+      "https://images.pexels.com/photos/3662667/pexels-photo-3662667.jpeg",
+      "https://images.pexels.com/photos/3661394/pexels-photo-3661394.jpeg",
+      "https://images.pexels.com/photos/3661400/pexels-photo-3661400.jpeg"
+    ],
+    "tags": ["kids", "hoodie"]
+  },
+
+  {
+    "id": 5,
+    "name": "Running Sneakers",
+    "category": "shoes",
+    "description": "Lightweight sneakers designed for comfort and performance.",
+    "price": 70,
+    "oldPrice": 90,
+    "discount": 22,
+    "rating": 4.7,
+    "reviews": 150,
+    "stock": 30,
+    "brand": "RunX",
+    "colors": ["white", "black"],
+    "sizes": ["40", "41", "42", "43", "44"],
+    "images": [
+      "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+      "https://images.pexels.com/photos/2529150/pexels-photo-2529150.jpeg",
+      "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg"
+    ],
+    "tags": ["shoes", "sport"]
+  },
+    {
+    "id": 6,
+    "name": "Boot",
+    "category": "shoes",
+    "description": "Lightweight sneakers designed for comfort and performance.",
+    "price": 70,
+    "oldPrice": false,
+    "discount": false,
+    "rating": 4.7,
+    "reviews": 150,
+    "stock": 30,
+    "brand": "RunX",
+    "colors": ["white", "black"],
+    "sizes": ["40", "41", "42", "43", "44"],
+    "images": [
+      "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+      "https://images.pexels.com/photos/2529150/pexels-photo-2529150.jpeg",
+      "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg"
+    ],
+    "tags": ["shoes", "sport"]
+  },
+    {
+    "id": 7,
+    "name": "Slippers",
+    "category": "shoes",
+    "description": "Lightweight sneakers designed for comfort and performance.",
+    "price": 70,
+    "oldPrice": false,
+    "discount": false,
+    "new": "NEW",
+    "rating": 4.7,
+    "reviews": 150,
+    "stock": 30,
+    "brand": "RunX",
+    "colors": ["white", "black"],
+    "sizes": ["40", "41", "42", "43", "44"],
+    "images": [
+      "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+      "https://images.pexels.com/photos/2529150/pexels-photo-2529150.jpeg",
+      "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg"
+    ],
+    "tags": ["shoes", "sport"]
+  },
+
+  {
+    "id": 8,
+    "name": "Leather Bag",
+    "category": "bags",
+    "description": "Premium leather bag with elegant design.",
+    "price": 100,
+    "oldPrice": 130,
+    "discount": 23,
+    "rating": 4.9,
+    "reviews": 95,
+    "stock": 12,
+    "brand": "LuxBag",
+    "colors": ["brown", "black"],
+    "images": [
+      "https://images.pexels.com/photos/179909/pexels-photo-179909.jpeg",
+      "https://images.pexels.com/photos/179910/pexels-photo-179910.jpeg",
+      "https://images.pexels.com/photos/179911/pexels-photo-179911.jpeg"
+    ],
+    "tags": ["bag", "leather"]
+  }
+]
