@@ -3,40 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>products</title>
+    <title>ecommerce</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Bootstrap/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<div class="container">    
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container-fluid">
-    <div class="logo mx-5">
-             <!-- <a class="navbar-brand" href="index.html"><img src="imgs/iman.png" alt="">store</a> -->
+    <div class="logo mx-5 d-flex align-items-center">
+    <a class="navbar-brand" href="index.html"><img src="imgs/logo.png" alt=""></a>
+      <div class="fs-4" id="theme-toggle"><i id="theme-icon" class="fa-regular fa-lightbulb"></i></div>
     </div>
-    <div class="fs-5" id="theme-toggle"><i id="theme-icon" class="fa-solid fa-sun"></i></div>
-        <div class="welcome mx-5 fs-3 fw-bold" ></div>
+        <div class="welcome mx-5 fs-4 fw-bold" ></div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <a class="nav-link active fw-semibold fs-5" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link active fw-semibold fs-6" aria-current="page" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold fs-5" href="#">About</a>
+          <a class="nav-link fw-semibold fs-6" href="#">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold fs-5" href="products.html">Products</a>
+          <a class="nav-link fw-semibold fs-6" href="products.html">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold fs-5" href="#">Contact</a>
+          <a class="nav-link fw-semibold fs-6" href="#">Contact</a>
         </li>
       </ul>
-            <div class="d-flex">
+            <div class="d-flex flex-sm-row ">
                 <div class="icon position-relative mx-4">
                     <i class="fa-regular fa-heart"></i>
                     <span id="fav" class="count">0</span>
@@ -47,11 +46,11 @@
                 </div>
             </div>
     </div>
-    <a href="re.html" id="login" class="btn-main ms-5 d-flex align-items-center fw-bold text-capitalize text-decoration-none px-4 py-2 gap-1 rounded-1 me-2"> Login<i class="fa-solid fa-right-to-bracket"></i></a>
+    <a href="re.html" id="login" class="btn-main ms-5 d-flex align-items-center fw-bold text-capitalize text-decoration-none py-lg-2 px-lg-3 py-1 px-2 gap-1 rounded-1 me-2"> Login<i class="fa-solid fa-right-to-bracket"></i></a>
   </div>
 </nav>
-</div>
-<section class="products mt-5 my-5">
+
+<section class="products my-5">
   <div class="row ">
      <div class="d-flex mt-5 col-6 mx-5" role="search">
         <input class="form-control ms-5 me-2" id="search" type="search" placeholder="Search product's name ....." aria-label="Search"/>
@@ -59,6 +58,7 @@
       </div>
   </div>
 </section>
+
 
 
 <section class="products my-5">
@@ -78,6 +78,27 @@
 
 <section class="products my-5">
   <div class="container">
+    <h1 class=" mb-5 fw-bold">Hot Sales !</h1>
+    <!-- <div class="row g-4"> -->
+    <div class="row g-4" id="saleRow">
+    </div>
+  </div>
+</section>
+
+
+<section class="products my-5">
+  <div class="container">
+    <h1 class=" mb-5 fw-bold">New Collections !</h1>
+    <!-- <div class="row g-4"> -->
+    <div class="row g-4" id="newRow">
+
+    </div>
+  </div>
+</section>
+
+
+<section class="products my-5">
+  <div class="container">
     <h1 class=" mb-5 fw-bold">Explore Our Products</h1>
     <!-- <div class="row g-4"> -->
     <div class="row g-4" id="productsRow">
@@ -85,6 +106,13 @@
     </div>
   </div>
 </section>
+<!-- 
+<section class="pagination d-flex">
+    <div id="items"></div>
+     <button class="btn" onclick="prevpg()">Prev</button>
+     <span class="page-info"></span>
+     <button class="btn" onclick="nextpg()">Next</button>
+</section> -->
 
 <footer class="footer">
   <div class="container">
@@ -92,7 +120,7 @@
 
       <!-- brand -->
       <div class="col-lg-4 col-md-6">
-        <h3 class="footer-logo">IMAN<span>.</span></h3>
+        <a class="footer-logo" href="#"><img src="imgs/logo.png" alt=""></a>
         <p class="footer-text">
           Premium fashion store delivering modern styles with high quality
           and timeless design.
@@ -163,7 +191,7 @@
 
   <div class="cart-footer">
     <h5>Total: $<span id="cart-total">0</span></h5>
-     <p>you have saved : $ <i  class="diss">0</i></p>
+     <!-- <p>you have saved : $ <i  class="diss">0</i></p> -->
     <button class="checkout-btn">Checkout</button>
   </div>
 </div>
