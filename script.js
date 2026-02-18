@@ -373,7 +373,7 @@ function loadCartItems() {
   });
 
   cartTotalSpan.innerText = total.toFixed(2);
-//   document.querySelector(".diss").innerText= dis-total
+  document.querySelector(".diss").innerText= dis-total
 }
 
   
