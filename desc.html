@@ -11,9 +11,8 @@
 
 <div class="container">
 
-  <div class="product-section">
-         <a class="text-decoration-none fs-6 fw-bold" href="products.html">x</a>
-
+  <div class="product-section d-flex gap-30 rounded-1 p-3">
+         <a class="text-decoration-none btn fs-6 fw-bold btn-close" aria-label="Close" href="index.html"></a>
 
     <!-- Images -->
     <div class="product-images">
@@ -30,15 +29,18 @@
     <!-- Product Info -->
      <!-- <a href="">x</a> -->
     <div class="product-info">
-      <h1 class="product-name">Product Name</h1>
-      <p class="product-price">$0.00</p>
-      <div class="cart-buttons">
-        <!-- <div class="quantity"> -->
-          <!-- <button id="minus">-</button> -->
-          <!-- <span id="qty">1</span> -->
-          <!-- <button id="plus">+</button> -->
-        <!-- </div> -->
-        <button class="add-cart">Add to Cart</button>
+      <h1 class="product-name fs-2 mb-5">Product Name</h1>
+      <div class="d-flex">
+      <span class="text-decoration-line-through text-muted oldprice fs-4 me-3">$0.00</span>
+      <p class="product-price mb-3 fs-3 fw-bold">$0.00</p>
+      </div>
+      <div class="cart-buttons  d-flex align-items-center mb-3">
+        <!-- <div class="quantity">
+          <button id="minus">-</button>
+          <span id="qty">1</span>
+          <button id="plus">+</button>
+        </div> -->
+        <button class="add-cart me-3">Add to Cart</button>
         <i  class="fa-regular fa-heart wishlist data-id" id="fav-count"></i>
       </div>
 

@@ -37,9 +37,10 @@ xhr.onreadystatechange = function() {
 /* ====== Load Product Details ====== */
 function loadProduct(){
     const p = products[ind];
-    document.querySelector(".product-name").textContent = `$${p.name}`;
+    document.querySelector(".product-name").textContent = `${p.name}`;
+    document.querySelector(".oldprice").textContent = `$${p.oldPrice || '0.00'}`;
     document.querySelector(".product-price").textContent = `$${p.price}`;
-    document.querySelector(".foot-desc").textContent = `SKU: ${p.sku} | Category: ${p.type}`;
+    document.querySelector(".foot-desc").textContent = `SKU: ${p.sku} | Category: ${p.category}`;
 
     const mainImg = document.getElementById("main-img");
     mainImg.src = p.images[0] || ""; // default main image
@@ -55,12 +56,12 @@ function createThumbnails(){
         const img = document.createElement("img");
         img.src = src;
         img.classList.add("thumb-img");
-        if(index === 0) img.style.borderColor = "#ff4d4d";
+        if(index === 0) img.style.borderColor = "#045278";
 
         img.addEventListener("mouseenter", () => {
             document.getElementById("main-img").src = src;
             document.querySelectorAll(".thumb-img").forEach(t => t.style.borderColor = "transparent");
-            img.style.borderColor = "#ff4d4d";
+            img.style.borderColor = "#045278";
         });
 
         thumbsContainer.appendChild(img);
@@ -87,7 +88,6 @@ function showInfo(){
     content.innerHTML = `
         <p>
             <strong>Weight:</strong> ${p.weight || "N/A"}<br>
-            <strong>Dimensions:</strong> ${p.dimensions || "N/A"}<br>
             <strong>Materials:</strong> ${p.materials || "N/A"}<br>
             <strong>Colors:</strong> ${p.colors?.join(", ") || "N/A"}<br>
             <strong>Sizes:</strong> ${p.sizes?.join(", ") || "N/A"}

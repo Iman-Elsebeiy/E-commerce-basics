@@ -1,7 +1,8 @@
 :root{
-    --main_color: #5e9236; 
+    --main_color: #05618f; 
+    /* --main_color: #5e9236;  */
     /* --main_color: #50812F;  */
-    /* --main_color: #f44444;  */
+    --smain_color: #f44444; 
     /* --main_color: #ff4d4dbf;  */
      --background-color: #edf9e4;
     --p_color:#7b7b7b;
@@ -20,7 +21,9 @@ body{
 }
 body.dark-mode{
     /* --main_color: #2c4a16ce;    lighter*/ 
-    --main_color: #2c4a16; 
+    --main_color: #054464a1; 
+        --smain_color: #881616b3; 
+    /* --main_color: #2c4a16;  */
     /* --background-color: #9ca396; */
     --background-color: #545553;
     --p_color:#454444;
@@ -34,7 +37,7 @@ body.dark-mode img {
 }
 
 span{
-    color: var(--main_color);
+    color: var(--smain_color);
 }
 p{
     color: var(--p_color);
@@ -70,7 +73,7 @@ nav{
     position: absolute;
     top: -10px;
     right: -10px;
-    background-color: var(--main_color);
+    background-color: var(--smain_color);
     width: 20px;
     height: 20px;
     font-size: 11px;
@@ -80,10 +83,10 @@ nav{
     color: var(--white_color);
 }
 .welcome span{
-    color: var(--main_color);
+    color: var(--smain_color);
 }
 .navbar-toggler-icon{
-    background-color: var(--main_color);
+    background-color: var(--smain_color);
 }
 
 .btn-main{
@@ -91,7 +94,7 @@ nav{
     color: var(--white_color);
     cursor: pointer;
     transition: 0.3s;
-    line-height: 35px;
+    line-height: 30px;
     letter-spacing: 0.5px;
 }
 .btn-main:hover{
@@ -148,7 +151,7 @@ nav{
 }
 
 .product-card img {
-  height: 400px;
+  height: 300px;
   object-fit: cover;
   transition: 0.4s;
 }
@@ -358,4 +361,9 @@ hr {
     inset: 0;
     background: rgba(0,0,0,0.45);
 
+}
+.logo img{
+  width: 70px;
+  height: 70px;
+  filter:grayscale(1);
 }

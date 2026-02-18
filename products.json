@@ -46,9 +46,9 @@
 
   {
     "id": 3,
-    "name": "Women Dress",
+    "name": "Wrist Watch",
     "category": "women",
-    "description": "Elegant evening dress with modern cut.",
+    "description": "Elegant watch with modern style and aeccessories.",
     "price": 90,
     "oldPrice": false,
     "discount": false,
@@ -56,10 +56,10 @@
     "reviews": 200,
     "stock": 18,
     "brand": "LunaStyle",
-    "colors": ["black", "red"],
+    "colors": ["black", "pink"],
     "sizes": ["S", "M", "L"],
     "images": [
-      "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg",
+        "imgs/watch.jpeg",
       "https://images.pexels.com/photos/2983465/pexels-photo-2983465.jpeg",
       "https://images.pexels.com/photos/6311394/pexels-photo-6311394.jpeg"
     ],
@@ -82,7 +82,7 @@
     "colors": ["blue", "yellow"],
     "sizes": ["2Y", "4Y", "6Y"],
     "images": [
-      "https://images.pexels.com/photos/3662667/pexels-photo-3662667.jpeg",
+        "imgs/kid1.jpeg",
       "https://images.pexels.com/photos/3661394/pexels-photo-3661394.jpeg",
       "https://images.pexels.com/photos/3661400/pexels-photo-3661400.jpeg"
     ],
@@ -125,37 +125,14 @@
     "colors": ["white", "black"],
     "sizes": ["40", "41", "42", "43", "44"],
     "images": [
-      "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
-      "https://images.pexels.com/photos/2529150/pexels-photo-2529150.jpeg",
+     "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg",
+      "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg",
       "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg"
     ],
     "tags": ["shoes", "sport"]
   },
-    {
-    "id": 7,
-    "name": "Slippers",
-    "category": "shoes",
-    "description": "Lightweight sneakers designed for comfort and performance.",
-    "price": 70,
-    "oldPrice": false,
-    "discount": false,
-    "new": "NEW",
-    "rating": 4.7,
-    "reviews": 150,
-    "stock": 30,
-    "brand": "RunX",
-    "colors": ["white", "black"],
-    "sizes": ["40", "41", "42", "43", "44"],
-    "images": [
-      "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
-      "https://images.pexels.com/photos/2529150/pexels-photo-2529150.jpeg",
-      "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg"
-    ],
-    "tags": ["shoes", "sport"]
-  },
-
   {
-    "id": 8,
+    "id": 7,
     "name": "Leather Bag",
     "category": "bags",
     "description": "Premium leather bag with elegant design.",
@@ -168,8 +145,8 @@
     "brand": "LuxBag",
     "colors": ["brown", "black"],
     "images": [
+        "imgs/bag1.jpeg",
       "https://images.pexels.com/photos/179909/pexels-photo-179909.jpeg",
-      "https://images.pexels.com/photos/179910/pexels-photo-179910.jpeg",
       "https://images.pexels.com/photos/179911/pexels-photo-179911.jpeg"
     ],
     "tags": ["bag", "leather"]

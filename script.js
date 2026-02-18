@@ -43,29 +43,29 @@ fetch(`products.json`)
   const saleRow = document.getElementById("saleRow");
   const newRow = document.getElementById("newRow");
   const row = document.getElementById("productsRow");
-    let currentPage =1;
-  const itemsPerPage = 3;
+//     let currentPage =1;
+//   const itemsPerPage = 3;
 
-  function displayItems(){ 
-  const start = (currentPage-1)*itemsPerPage
-  const end = start + itemsPerPage
-  const pageItems = data.slice(start, end)
+//   function displayItems(){ 
+//   const start = (currentPage-1)*itemsPerPage
+//   const end = start + itemsPerPage
+//   const pageItems = data.slice(start, end)
 
-document.getElementById("items").innerHTML =pageItems.map(item=>`<p>Item ${item}</p>`).join('');
-// document.getElementById("page-info").innerHTML =`Page ${currentPage}`
+// document.getElementById("items").innerHTML =pageItems.map(item=>`<p>Item ${item}</p>`).join('');
+// // document.getElementById("page-info").innerHTML =`Page ${currentPage}`
 
-}
-  function prevpg(){
-     if (currentPage >1)
-        currentPage --
-    displayItems();
-  }
-  function nextpg(){
-    if(currentPage * itemsPerPage < data.length){
-        currentPage ++
-        displayItems();
-    }
-  }
+// }
+//   function prevpg(){
+//      if (currentPage >1)
+//         currentPage --
+//     displayItems();
+//   }
+//   function nextpg(){
+//     if(currentPage * itemsPerPage < data.length){
+//         currentPage ++
+//         displayItems();
+//     }
+//   }
 
 
   data.forEach(product => {
@@ -75,24 +75,24 @@ document.getElementById("items").innerHTML =pageItems.map(item=>`<p>Item ${item}
           <div class="img-wrapper position-relative">
             <img src="${product.images[0]}" class="card-img-top" alt="${product.name}">
             <span class="discount position-absolute top-0 start-0 rounded-circle d-flex 
-             justify-content-center align-items-center p-4 fs-6">%${product.discount}</span>
+             justify-content-center align-items-center p-4 fs-6">%${product.discount || "0"}</span>
           </div>
           <div class="card-body">
             <a href="desc.html?id=${product.id}" class="card-title d-block text-decoration-none fs-5 fw-semibold">
               ${product.name}
             </a>
             <p class="card-text">${product.category}</p>
-             <span class="text-decoration-line-through text-muted">$${product.oldPrice}</span>
+             <span class="text-decoration-line-through text-muted">$${product.oldPrice || "0.00"}</span>
              <span class="price ms-2 me-5">$${product.price}</span>
-             <button class="btn-main ms-5 px-3 py-2"
-              onclick="addToCart(${product.id})">
+             <button id="add_cart" class="btn-main ms-5 px-3 py-2">
               <i class="fa-solid fa-plus"></i>
              </button>
           </div>
         </div>
       </div>
     `;
-
+  });
+  data.forEach(product => {
     if (product.oldPrice){
         // console.log(1);
       saleRow.innerHTML += `
@@ -101,15 +101,15 @@ document.getElementById("items").innerHTML =pageItems.map(item=>`<p>Item ${item}
           <div class="img-wrapper position-relative">
             <img src="${product.images[0]}" class="card-img-top" alt="${product.name}">
             <span class="discount position-absolute top-0 start-0 rounded-circle d-flex 
-             justify-content-center align-items-center p-4 fs-6">%${product.discount}</span>
+             justify-content-center align-items-center p-4 fs-6">%${product.discount || "0"}</span>
           </div>
           <div class="card-body">
             <a href="desc.html?id=${product.id}" class="card-title d-block text-decoration-none fs-5 fw-semibold">
               ${product.name}
             </a>
             <p class="card-text">${product.category}</p>
-             <span class="text-decoration-line-through text-muted">$${product.oldPrice}</span>
-             <span class="price ms-2 me-5">$${product.price}</span>
+             <span class="text-decoration-line-through text-muted">$${product.oldPrice ||"" }</span>
+             <span class="price fs-5 ms-2 me-5">$${product.price}</span>
              <button class="btn-main ms-5 px-3 py-2"
               onclick="addToCart(${product.id})">
               <i class="fa-solid fa-plus"></i>
@@ -124,7 +124,7 @@ document.getElementById("items").innerHTML =pageItems.map(item=>`<p>Item ${item}
       newRow.innerHTML += `
       <div class="col-lg-4 col-md-6">
         <div class="card product-card h-100">
-          <div class="img-wrapper position-relative">
+          <div class="img-wrapper position-relative ">
             <img src="${product.images[0]}" class="card-img-top" alt="${product.name}">
             <span class="discount position-absolute top-0 start-0 rounded-circle d-flex 
              justify-content-center align-items-center p-4 fs-6">${product.new}</span>
@@ -134,7 +134,7 @@ document.getElementById("items").innerHTML =pageItems.map(item=>`<p>Item ${item}
               ${product.name}
             </a>
             <p class="card-text">${product.category}</p>
-             <span class="price ms-2 me-5">$${product.price}</span>
+             <span class="price fs-5 ms-2 me-5">$${product.price}</span>
              <button class="btn-main ms-5 px-3 py-2"
               onclick="addToCart(${product.id})">
               <i class="fa-solid fa-plus"></i>
@@ -148,12 +148,10 @@ document.getElementById("items").innerHTML =pageItems.map(item=>`<p>Item ${item}
     //     noProducts.innerHTML=`Coming Soon`
     // }
   }) //foreach
-    displayItems() 
 
 
 //filter
     document.getElementById("btn-search").addEventListener("click",function(){
-       
      const searchText = document.getElementById("search").value.trim().toLowerCase();
     //  console.log(searchText);
      x = data.filter(product => product.name.toLowerCase().includes(searchText) );
@@ -165,15 +163,15 @@ document.getElementById("items").innerHTML =pageItems.map(item=>`<p>Item ${item}
           <div class="img-wrapper position-relative">
             <img src="${product.images[0]}" class="card-img-top" alt="${product.name}">
             <span class="discount position-absolute top-0 start-0 rounded-circle d-flex 
-             justify-content-center align-items-center p-4 fs-6">%${product.discount}</span>
+             justify-content-center align-items-center p-4 fs-6">%${product.discount ||"0"}</span>
           </div>
           <div class="card-body">
-            <a href="desc.html?id=${product.id}" class="card-title d-block text-decoration-none fs-5 fw-semibold">
+            <a href="desc.html?id=${product.id}" class="card-title d-block text-decoration-none fs-5 fw-bold">
               ${product.name}
             </a>
             <p class="card-text">${product.category}</p>
-             <span class="text-decoration-line-through text-muted">$${product.oldPrice}</span>
-             <span class="price ms-2 me-5">$${product.price}</span>
+             <span class="text-decoration-line-through text-muted">$${product.oldPrice || ""}</span>
+             <span class="price fs-5 ms-2 me-5">$${product.price}</span>
              <button class="btn-main ms-5 px-3 py-2"
               onclick="addToCart(${product.id})">
               <i class="fa-solid fa-plus"></i>
@@ -213,6 +211,23 @@ document.getElementById("items").innerHTML =pageItems.map(item=>`<p>Item ${item}
 //     }
 //   }
 
+
+/* ====== Add to Cart ====== */
+document.getElementById("add_cart").addEventListener("click", () => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || []
+    console.log(666);
+    const found = cart.find(item => item.id === productId);
+
+    if(found){
+        found.qty += 1;
+    } else {
+        cart.push(products[ind]);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    cartBtn.innerText = "Added ✔";
+    // setTimeout(() => cartBtn.innerText = "Add to Cart", 1200);
+});
 
     })//data api fetch 31
 
@@ -294,91 +309,74 @@ if (loggedInUser) {
 }
 
 
-///// cart
-// ===============================
-// CART SIDEBAR
-// ===============================
-// const cartIcon = document.querySelector(".fa-cart-shopping");
-// const cartSidebar = document.getElementById("cart-sidebar");
-// const cartOverlay = document.getElementById("cart-overlay");
-// const closeCartBtn = document.getElementById("close-cart");
-// const cartItemsContainer = document.getElementById("cart-items");
-// const cartTotalSpan = document.getElementById("cart-total");
+/// cart
+//===============================
+//CART SIDEBAR
+const cartIcon = document.querySelector(".icon-cart");
+const cartSidebar = document.getElementById("cart-sidebar");
+const cartOverlay = document.getElementById("cart-overlay");
+const closeCartBtn = document.getElementById("close-cart");
+const cartItemsContainer = document.getElementById("cart-items");
+const cartTotalSpan = document.getElementById("cart-total");
 
-// // Open Cart
-// cartIcon.addEventListener("click", () => {
-//   cartSidebar.classList.add("active");
-//   cartOverlay.classList.add("active");
-//   loadCartItems();
-// });
+// Open Cart
+cartIcon.addEventListener("click", () => {
+  cartSidebar.classList.add("active");
+  cartOverlay.classList.add("active");
+  loadCartItems();
+});
 
-// // Close Cart
-// closeCartBtn.addEventListener("click", closeCart);
-// cartOverlay.addEventListener("click", closeCart);
+// Close Cart
+closeCartBtn.addEventListener("click", closeCart);
+cartOverlay.addEventListener("click", closeCart);
 
-// function closeCart() {
-//   cartSidebar.classList.remove("active");
-//   cartOverlay.classList.remove("active");
-// }
+function closeCart() {
+  cartSidebar.classList.remove("active");
+  cartOverlay.classList.remove("active");
+}
 
-// ===============================
+//===============================
 // CART LOGIC
 // // ===============================
-// function getCartItems() {
-//   return JSON.parse(localStorage.getItem("cart")) || [];
-// }
+function getCartItems() {
+  return JSON.parse(localStorage.getItem("cart")) || [];
+}
 
-// function loadCartItems() {
-//   const cart = getCartItems();
-//   cartItemsContainer.innerHTML = "";
+function loadCartItems() {
+  const cart = getCartItems();
+  cartItemsContainer.innerHTML = "";
 
-//   let total = 0;
-//   let dis = 0;
+  let total = 0;
+  let dis = 0;
 
 
-//   if (cart.length === 0) {
-//     cartItemsContainer.innerHTML = "<p>Your cart is empty</p>";
-//     cartTotalSpan.innerText = 0;
-//     return;
-//   }
+  if (cart.length === 0) {
+    cartItemsContainer.innerHTML = "<p>Your cart is empty</p>";
+    cartTotalSpan.innerText = 0;
+    return;
+  }
 
-//   cart.forEach(item => {
-//     total += item.price;
-//     dis += item.oldPrice;
+  cart.forEach(item => {
+    total += item.price;
+    dis += item.oldPrice;
 
-//     cartItemsContainer.innerHTML += `
-//       <div class="cart-item">
-//         <img src="${item.images[0]}" alt="">
-//         <div>
-//           <h6>${item.name}</h6>
-//         <span class="text-decoration-line-through text-muted">$${item.oldPrice}</span>
-//           <span>$${item.price}</span>
-//         </div>
-//       </div>
-//     `;
-//   });
+    cartItemsContainer.innerHTML += `
+      <div class="cart-item">
+        <img src="${item.images[0]}" alt="">
+        <div>
+          <h6>${item.name}</h6>
+        <span class="text-decoration-line-through text-muted">$${item.oldPrice || "0"}</span>
+          <span>$${item.price}</span>
+        </div>
+      </div>
+    `;
+  });
 
-//   cartTotalSpan.innerText = total.toFixed(2);
+  cartTotalSpan.innerText = total.toFixed(2);
 //   document.querySelector(".diss").innerText= dis-total
-// }
+}
 
   
-
-
-
-//filter
-// document.getElementById("btn-search").addEventListener("click",function(){
-// const inputText = document.getElementById("search").value
-//         if({1:"name"}.include(inputText)){
-//             alert("yyyy")
-            
-//         }else{
-//            alert("noo")
-    
-// }})
-   
-    //filter
-
 
 
 

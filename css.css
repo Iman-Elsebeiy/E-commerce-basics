@@ -83,26 +83,12 @@ body {
   min-width: 300px;
 }
 
-.product-name{
-  font-size: 36px;
-  margin-bottom: 10px;
-}
 
 .product-price{
-  font-size: 30px;
   color: #075e8a;
-  margin-bottom: 20px;
-  font-weight: bold;
 }
 
 /* Cart Buttons */
-.cart-buttons{
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 30px;
-}
 
 .cart-buttons .quantity{
   display: flex;
